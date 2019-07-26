@@ -1,6 +1,6 @@
 import React from 'react'
 
-class RoomList extends React.Component {
+class HashList extends React.Component {
     render () {
         return (
             <div className="haschtag-list">
@@ -10,4 +10,4 @@ class RoomList extends React.Component {
     }
 }
 
-export default RoomList
+export default HashList
