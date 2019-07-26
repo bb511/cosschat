@@ -1,0 +1,13 @@
+import React from 'react'
+
+class RoomList extends React.Component {
+    render () {
+        return (
+            <div className="haschtag-list">
+                <div className="help-text">HashtagList</div>
+            </div>
+        )
+    }
+}
+
+export default RoomList
