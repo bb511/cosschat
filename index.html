@@ -2,10 +2,18 @@
 <html>
     <head>
         <script type="text/javascript" src="http://livejs.com/live.js"></script>
-        <title>Login</title>
-        <link rel="stylesheet" href="login_page.css" />
+        <title>Cosschat Login Page</title>
+        <link rel="stylesheet" href="css/login_page.css" />
+        <style>
+        body {
+          background-image: url("img/login/CERNbackground.png");
+          background-position: 50% 50%;
+          background-repeat: repeat;
+        }
+        </style>
     </head>
-    <body>
+    <body background="img/login/CERNbackground.png">
+
         <div id="container">
         <form>
             <label for="username">Username:</label>
@@ -16,8 +24,11 @@
             <input type="checkbox"><label for="checkbox">Keep me logged in</label>
             <input type="submit" value="Login">
             </div>
+            <div id="container signin">
+            <p>Don't have an account? <a href="#">Sign in</a>.</p>
+            </div>
+
         </form>
         </div>
     </body>
 </html>
-
