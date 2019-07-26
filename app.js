@@ -12,8 +12,21 @@ class App extends React.Component {
     componentDidMount() {
         const chatManager = new Chatkit.ChatManager({
             instanceLocator,
-            
+            userId: 'CERNID', /** swap out */
+            tokenProvider: new Chatkit.TokenProvider({
+                url: tokenUrl
         })
+      })
+        chatManager.connect()
+        .then(currentUser => {
+            currentUser.subscribeToRoom({
+                roomId: 19459195
+                hooks: {
+                    onNewMessage: message => {
+                        console.log('message.text: ', message.text);
+                    }
+                }
+            })
     }
     
     render() {
