@@ -1,0 +1,15 @@
+body{font-family:sans-serif;font-size:12px;line-height:1.4em;}
+label {font-size:15px}
+
+a {text-decoration:none; color:ffcc00;}
+
+.onlineuser  {margin-left:20px; margin-top:20px; height: 300px; width:274px; padding:16px 4px 6px;font-weight:normal;background:#fff;border:1px solid #e5e5e5;-webkit-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;}
+.iFrmPad {margin-left:20px; margin-top:20px; height: 320px; width:375px; float: left; padding:0px;font-weight:normal;background:#fff;border:1px solid #e5e5e5;-webkit-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;}
+.iFrm {margin-left:2px; height: 230px; width:360px; padding:6px 4px 6px;font-weight:normal; background:#fff;}
+
+#login {width:300px; margin-left:auto; margin-right:auto; margin-top:100px; padding:26px 14px 16px; background:#fff; border:1px solid #e5e5e5; -webkit-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px; box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px; border-radius:7px 7px;}
+#signup {width:300px; margin-left:auto; margin-right:auto; margin-top:100px; padding:26px 14px 16px; background:#fff; border:1px solid #e5e5e5; -webkit-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px; box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px; border-radius:7px 7px;}
+
+input[type="text"], input[type="password"] {width:300px; margin-top:5px; margin-left:3px; margin-right:3px; padding:3px 5px; height:30px; font-family:Arial, Helvetica, sans-serif; font-size:17px; color:#bfbfbf; font-weight:bold; border:#cbcbcb solid 1px; background-color:#ffffff;}
+input[type="button"]{width:50px; height:37px; margin-top:5px; margin-right:2px; font-family:Arial, Helvetica, sans-serif; font-size:17px; color:#bfbfbf; font-weight:bold; text-align:center; cursor:pointer; border:#cbcbcb solid 1px; background:#ffffff}
+input[type="text"]:focus, input[type="password"]:focus {-webkit-box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px; box-shadow:rgba(200,200,200,0.7) 0 4px 10px -1px;}
