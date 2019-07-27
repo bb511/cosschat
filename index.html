@@ -1,35 +1,36 @@
+<?php
+    require 'header.html';
+?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <script type="text/javascript" src="http://livejs.com/live.js"></script>
-        <title>Cosschat Login Page</title>
-        <link rel="stylesheet" href="css/login_page.css" />
-        <style>
-            body{
-              background-image: url("img/login/CERNbackground.png");
-              background-position: 50% 50%;
-              background-repeat: repeat;
-            }
-        </style>
-    </head>
-    <body background="img/login/CERNbackground.png">
-        <div id="container">
-        <form action="includes/signup.inc.php" method="post">
-            <label for="email">Email:</label>
-            <input type="text" id="mail" name="mail">
-            <label for="password">Password:</label>
-            <input type="password" id="pwd" name="pwd">
-            <div id="lower">
-            <input type="checkbox"><label for="checkbox">Keep me logged in</label>
-            <input type="signin-submit" value="Login">
-            </div>
-            <div id="container signin">
-                <p class="message">Not registered? <a href="register.html">Register here</a></p>
-            </div>
-            </div>
-        </form>
+<head>
+    <title>Cosschat Login Page</title>
+    <link rel="stylesheet" href="css/login_page.css"/>
+    <style>
+        body{
+            background-image: url("img/login/CERNbackground.png");
+            background-position: 50% 50%;
+            background-repeat: repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <form action="includes/login.inc.php" method="post">
+        <label for="email">Email:</label>
+        <input type="text" name="mail" placeholder="email">
+        <label for="password">Password:</label>
+        <input type="password" name="pwd" placeholder="password">
+        <div id="lower">
+        <input type="checkbox"><label for="checkbox">Keep me logged in</label>
+        <button type="submit" name="login-submit">Signin</button>
         </div>
-       </form>
-
-    </body>
+        <div id="container signin">
+                <p class="message">Not registered? <a href="register.html">Register </a></p>
+        </div>
+        </div>
+        </form>
+    </div>
+    </form>
+</body>
 </html>
