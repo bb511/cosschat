@@ -54,10 +54,6 @@ html, body{
   color: #C0C0C0 !important;
 }
 
-.form-all {
-background: url("img/login/CERNbackground.png") no-repeat top left;
-}
-
 
 
 /* .bg-img {
@@ -153,7 +149,7 @@ input[type=checkbox]{
 }
 
 
-input[type=submit]{
+input[type=button]{
     /* text-align: center; */
     width: 30%;
     margin-left: 35%;
