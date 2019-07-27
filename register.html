@@ -1,20 +1,21 @@
+<?php
+    require 'header.html';
+?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <script type="text/javascript" src="http://livejs.com/live.js"></script>
-        <title>Cosschat Login Page</title>
-        <link rel="stylesheet" href="css/register_page.css" />
-        <style>
-        body {
-          background-image: url("img/login/CERNbackground.png");
-          background-position: 50% 50%;
-          background-repeat: repeat;
-        }
-        </style>
-    </head>
-    <!-- <body background="img/login/CERNbackground.png"> -->
-    <form>
-
+<head>
+    <title>Cosschat Login Page</title>
+    <link rel="stylesheet" href="css/register_page.css" />
+    <style>
+    body {
+        background-image: url("img/login/CERNbackground.png");
+        background-position: 50% 50%;
+        background-repeat: repeat;
+    }
+    </style>
+</head>
+<body>
+    <form action="includes/signup.inc.php" method="post">
         <div id="container">
             <label for="fname">First Name:</label>
             <input type="text" id="f.name" name="f.name">
@@ -43,7 +44,6 @@
             </div> -->
 
         </div>
-       </form>
-
-    </body>
+    </form>
+</body>
 </html>
