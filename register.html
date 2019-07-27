@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/login_page.css" />
     <style>
     body {
-        background-image: url("img/login/CERNbackground.png");
+        background-image: url("summies2019.jpg");
         background-position: 50% 50%;
         background-repeat: repeat;
     }
@@ -16,15 +16,20 @@
 </head>
 <body>
     <form action="includes/signup.inc.php" method="post">
-        <div id="container">
+      <div id="container" style="top: 25%; width: 340px;height: 580px;">
+        <label for="f_name">First Name:</label>
         <input type="text" name="name" placeholder="First name">
+        <label for="s_name">Surname:</label>
         <input type="text" name="surname" placeholder="Surname">
+        <label for="email">Email:</label>
         <input type="text" name="mail" placeholder="Email">
+        <label for="password">Password:</label>
         <input type="password" name="pwd" placeholder="Password">
+        <label for="r_password">Repeat Password:</label>
         <input type="password" name="pwdRepeat" placeholder="Repeat password">
         <div id="lower">
         <p>By creating an account you agree to our <a href="#">Terms & Privacy</a></p>
-        <button type="submit" name="signup-submit">Signup</button>
+        <button type="submit" name="signup-submit" style="margin-left: 35%;margin-right: 38%;margin-top: 5%;font-size: 15px;">Register</button>
         </div>
         </div>
     </form>
