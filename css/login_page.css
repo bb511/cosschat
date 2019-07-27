@@ -26,12 +26,12 @@ html, body{
 
 #container{
     position: fixed;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.3);
     color: #FFFFFF;
 
 
     width: 340px;
-    height: 280px;
+    height: 300px;
     top: 35%;
     left: 70%;
     margin-top: -130px;
@@ -114,6 +114,12 @@ input[type=password]{
     margin-left: 18px;
     width: 290px;
     height: 35px;
+
+}
+
+input[type="submit"]:hover {
+    border: 1px solid #999;
+    background: #ffb6c1;
 }
 
 #lower{
@@ -150,16 +156,22 @@ input[type=checkbox]{
 
 
 input[type=submit]{
+    font-size: 15px;
     float: right;
     margin-right: 20px;
-    margin-top: 0px;
+    margin-top: 5%;
     width: 80px;
     height: 30px;
 }
 
-a {
-  color: dodgerblue;
+input[type="submit"]:hover {
+    border: 1px solid #999;
+    background: #ffb6c1;
 }
+
+/* a {
+  color: dodgerblue;
+} */
 
 
 /* button:hover {
