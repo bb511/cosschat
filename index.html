@@ -5,29 +5,27 @@
         <title>Cosschat Login Page</title>
         <link rel="stylesheet" href="css/login_page.css" />
         <style>
-        body {
-          background-image: url("img/login/CERNbackground.png");
-          background-position: 50% 50%;
-          background-repeat: repeat;
-        }
+            body{
+              background-image: url("img/login/CERNbackground.png");
+              background-position: 50% 50%;
+              background-repeat: repeat;
+            }
         </style>
     </head>
     <body background="img/login/CERNbackground.png">
-
         <div id="container">
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username">
+        <form action="includes/signup.inc.php" method="post">
+            <label for="email">Email:</label>
+            <input type="text" id="mail" name="mail">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="pwd" name="pwd">
             <div id="lower">
             <input type="checkbox"><label for="checkbox">Keep me logged in</label>
-            <input type="submit" value="Login">
+            <input type="signin-submit" value="Login">
             </div>
             <div id="container signin">
             <p>Don't have an account? <a href="#">Sign in</a>.</p>
             </div>
-
         </form>
         </div>
     </body>
