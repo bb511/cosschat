@@ -5,13 +5,7 @@ from channels.generic.websocket import AsyncJsonWebsocketConsumer
 from .exceptions import ClientError
 from .utils import get_room_or_error
 
-<<<<<<< HEAD
-from .models import Room
 
-Room.objects.create(title='CommonRoom', staff_only=False)
-
-=======
->>>>>>> master
 class ChatConsumer(AsyncJsonWebsocketConsumer):
     """
     This chat consumer handles websocket connections for chat clients.
