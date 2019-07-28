@@ -5,8 +5,8 @@
 
 {% block content %}
     <form action="." method="POST">
-      <label for="email">Email:</label>
-      <input type="text" name="mail" placeholder="email">
+      <!-- <label for="username">Username:</label>
+      <input type="text" name="username" placeholder="usernames">
       <label for="password">Password:</label>
       <input type="password" name="pwd" placeholder="password">
       <div id="lower">
@@ -15,11 +15,30 @@
       </div>
       <div id="container signin">
               <p class="message" style="text-align:center">Not registered? <a href="register.html" style="font-size: 15px">Register </a></p>
+      </div> -->
+
+
+        <!-- {{ form }} -->
+
+        {{ form.non_field_errors }}
+      <div id="container2">
+      <div class="fieldWrapper">
+        {{ form.subject.errors }}
+        <label for="{{ form.username.id_for_label }}">Username:</label>
+
+        {{ form.username }}
       </div>
+      <div class="fieldWrapper">
+        {{ form.message.errors }}
+        <label for="{{ form.password.id_for_label }}">Password:</label>
+
+        {{ form.password }}
       </div>
 
-        {{ form }}
-        {% csrf_token %}
+      <button type="submit" name="login-submit" style="font-size: 15px;">Login</button>
+      </div>
+
+            {% csrf_token %}
         <!-- <button>Login</button> -->
     </form>
 
