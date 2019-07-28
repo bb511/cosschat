@@ -1,17 +1,25 @@
 {% extends "base.html" %}
 
-{% block title %}MultiChat Example{% endblock %}
-{% block header_text %}MultiChat Example{% endblock %}
+
+{% block title %}CossSection{% endblock %}
+{% block header_text %}CossSection{% endblock %}
 
 {% block content %}
+<div class="navbar" onclick="openForm()"></button>
+  <div class="chat-popup" id="myForm">
+    <form action="/action_page.php" class="form-container">
+
 
     <ul class="rooms">
         {% for room in rooms %}
             <li class="room-link" data-room-id="{{ room.id }}">{{ room }}</li>
         {% empty %}
+
             <p class="empty">No chat rooms defined. Maybe make some in the <a href="{% url 'admin:index' %}">admin</a>?</p>
         {% endfor %}
     </ul>
+</div>
+
 
     <div id="chats">
     </div>
