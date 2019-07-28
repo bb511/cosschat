@@ -4,21 +4,25 @@
 {% block header_text %}MultiChat Example{% endblock %}
 
 {% block content %}
+
     <ul class="rooms">
         {% for room in rooms %}
             <li class="room-link" data-room-id="{{ room.id }}">{{ room }}</li>
         {% empty %}
-            <p class="empty">No chat rooms defined. Maybe make some in the <a href="{% url 'admin:index' %}">admin panel</a>?</p>
+            <p class="empty">No chat rooms defined. Maybe make some in the <a href="{% url 'admin:index' %}">admin</a>?</p>
         {% endfor %}
     </ul>
 
     <div id="chats">
     </div>
+
 {% endblock %}
 
 
 {% block extra_body %}
     <script>
+        var openRoomPointer = null;
+        var roomIdGlo = 0;
         $(function () {
             // Correctly decide between ws:// and wss://
             var ws_scheme = window.location.protocol == "https:" ? "wss" : "ws";
@@ -118,24 +122,28 @@
             inRoom = function (roomId) {
                 return $("#room-" + roomId).length > 0;
             };
-
             // Room join/leave
             $("li.room-link").click(function () {
                 roomId = $(this).attr("data-room-id");
-                if (inRoom(roomId)) {
-                    // Leave room
-                    $(this).removeClass("joined");
-                    socket.send(JSON.stringify({
-                        "command": "leave",
-                        "room": roomId
-                    }));
-                } else {
+                if(!inRoom(roomId)) {
                     // Join room
                     $(this).addClass("joined");
                     socket.send(JSON.stringify({
                         "command": "join",
                         "room": roomId
                     }));
+                    if(roomIdGlo != 0){
+                        openRoomPointer.removeClass("joined");
+                        socket.send(JSON.stringify({
+                            "command": "leave",
+                            "room": roomIdGlo
+                        }));
+                    }
+                    openRoomPointer = $(this);
+                    roomIdGlo = roomId;
+                } else {
+                    // Leave room
+                    console.log(openRoomPointer);
                 }
             });
 
