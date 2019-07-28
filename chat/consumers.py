@@ -5,7 +5,6 @@ from channels.generic.websocket import AsyncJsonWebsocketConsumer
 from .exceptions import ClientError
 from .utils import get_room_or_error
 
-
 class ChatConsumer(AsyncJsonWebsocketConsumer):
     """
     This chat consumer handles websocket connections for chat clients.
@@ -17,7 +16,6 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
     """
 
     ##### WebSocket event handlers
-
     async def connect(self):
         """
         Called when the websocket is handshaking as part of initial connection.
