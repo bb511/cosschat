@@ -1,45 +1,24 @@
 {% extends "indexcosschat.html" %}
 
 {% block title %}Login{% endblock %}
-{% block header_text %}Login{% endblock %}
 
 {% block content %}
+<div id="containerlogin">
     <form action="." method="POST">
-      <!-- <label for="username">Username:</label>
-      <input type="text" name="username" placeholder="usernames">
-      <label for="password">Password:</label>
-      <input type="password" name="pwd" placeholder="password">
-      <div id="lower">
-      <input type="checkbox"><label for="checkbox">Keep me logged in</label>
-      <button type="submit" name="login-submit">Login</button>
-      </div>
-      <div id="container signin">
-              <p class="message" style="text-align:center">Not registered? <a href="register.html" style="font-size: 15px">Register </a></p>
-      </div> -->
-
-
-        <!-- {{ form }} -->
-
         {{ form.non_field_errors }}
-      <div id="container2">
-      <div class="fieldWrapper">
         {{ form.subject.errors }}
-        <label for="{{ form.username.id_for_label }}">Username:</label>
-
+        <label for="{{ form.username.id_for_label }}">Username</label>
         {{ form.username }}
-      </div>
-      <div class="fieldWrapper">
         {{ form.message.errors }}
-        <label for="{{ form.password.id_for_label }}">Password:</label>
-
+        <label for="{{ form.password.id_for_label }}">Password</label>
         {{ form.password }}
-      </div>
-
+      <div style="text-align:center;">
       <button type="submit" name="login-submit" style="font-size: 15px;">Login</button>
+      <br><br>
+      <center>Not signed up yet? Plese register <a href="{% url 'signup' %}">here</a>.</center>
+      {% csrf_token %}
       </div>
-
-            {% csrf_token %}
-        <!-- <button>Login</button> -->
     </form>
+</div>
 
 {% endblock %}
