@@ -1,0 +1,53 @@
+<?php
+    require 'header.html';
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cosschat Login Page</title>
+    <link rel="stylesheet" href="css/login_page.css" />
+    <style>
+    body {
+        background-image: url("static/images/CERNbackground.png");
+        background-attachment: fixed;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+
+
+    }
+    </style>
+</head>
+<body>
+    <form action="includes/signup.inc.php" method="post">
+        <div id="container" style="top: 25%; width: 340px;height: 650px;">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" placeholder="first name">
+            <label for="sname">Surname:</label>
+            <input type="text" id="sname" name="sname" placeholder="surname">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="email">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="username">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="password">
+            <div id="repeat">
+            <label for="repeat password" >Repeat Password:</label>
+            <input type="password" id="repeat password" name="repeat password" placeholder="password">
+            </div>
+            <div id="lower2" style="text-align:center;">
+              <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+              <input type="button" value="Register" style="margin-left: 35%;margin-right: 38%;margin-top: 5%;font-size: 15px;">
+            </div>
+            <!-- <div id="container signin"> -->
+
+            <!-- </div> -->
+<!-- style="color:black" -->
+            <!-- <div class="container signin">
+              <p>Already have an account? <a href="#">Sign in</a></p>
+            </div> -->
+
+        </div>
+    </form>
+</body>
+</html>

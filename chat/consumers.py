@@ -5,6 +5,9 @@ from channels.generic.websocket import AsyncJsonWebsocketConsumer
 from .exceptions import ClientError
 from .utils import get_room_or_error
 
+from .models import Room
+
+Room.objects.create(title='CommonRoom', staff_only=False)
 
 class ChatConsumer(AsyncJsonWebsocketConsumer):
     """
@@ -28,6 +31,7 @@ class ChatConsumer(AsyncJsonWebsocketConsumer):
             await self.close()
         else:
             # Accept the connection
+            join_room('CommonRoom')
             await self.accept()
         # Store which rooms the user has joined on this connection
         self.rooms = set()

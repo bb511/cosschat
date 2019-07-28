@@ -22,3 +22,6 @@ class Room(models.Model):
         messages as they are generated.
         """
         return "room-%s" % self.id
+
+
+
