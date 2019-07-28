@@ -1,14 +1,26 @@
-{% extends "base.html" %}
+{% extends "indexcosschat.html" %}
 
 {% block title %}Login{% endblock %}
 {% block header_text %}Login{% endblock %}
 
 {% block content %}
-
     <form action="." method="POST">
-        {{ form.as_p }}
+      <label for="email">Email:</label>
+      <input type="text" name="mail" placeholder="email">
+      <label for="password">Password:</label>
+      <input type="password" name="pwd" placeholder="password">
+      <div id="lower">
+      <input type="checkbox"><label for="checkbox">Keep me logged in</label>
+      <button type="submit" name="login-submit">Login</button>
+      </div>
+      <div id="container signin">
+              <p class="message" style="text-align:center">Not registered? <a href="register.html" style="font-size: 15px">Register </a></p>
+      </div>
+      </div>
+
+        {{ form }}
         {% csrf_token %}
-        <button>Login</button>
+        <!-- <button>Login</button> -->
     </form>
 
 {% endblock %}
