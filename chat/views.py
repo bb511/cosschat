@@ -16,3 +16,6 @@ def index(request):
     return render(request, "index.html", {
         "rooms": rooms,
     })
+
+def registration_view(request):
+    return render(request, "register.html")
