@@ -9,7 +9,16 @@ html, body{
     margin: 0;
     padding: 0;
 }
-
+body img{
+  position: fixed;
+  float:left;
+  right: 20px;
+  left: 1075px;
+  top: -80px;
+  width: 50%;
+  height: 50%;
+  z-index: -1;
+}
 #containerlogin{
     position: fixed;
     background: rgba(0, 0, 0, 0.5);
@@ -20,6 +29,14 @@ html, body{
     left: 70%;
     margin-top: -250px;
     margin-left: -170px;
+}
+
+#containerlogo{
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    margin-top: -1000px;
+    margin-left: -1000px;
 }
 
 #containersignup{
