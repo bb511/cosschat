@@ -3,18 +3,20 @@
 {% block title %}Login{% endblock %}
 
 {% block content %}
-<div id="containerlogin">
+
     <form action="." method="POST">
         {{ form.non_field_errors }}
+<div id="containerlogin">
         {{ form.subject.errors }}
         <label for="{{ form.username.id_for_label }}">Username</label>
         {{ form.username }}
         {{ form.message.errors }}
         <label for="{{ form.password.id_for_label }}">Password</label>
         {{ form.password }}
+      <br><br><br>
       <div style="text-align:center;">
       <button type="submit" name="login-submit" style="font-size: 15px;">Login</button>
-      <br><br>
+      <br><br><br><br><br><br>
       <center>Not signed up yet? Plese register <a href="{% url 'signup' %}">here</a>.</center>
       {% csrf_token %}
       </div>
