@@ -6,52 +6,46 @@ html, body{
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     color: #444;
     -webkit-font-smoothing: antialiased;
-    /* background: #f0f0f0; */
-    /* background: url("img/login/CERNbackground.png") no-repeat top left fixed ; */
     margin: 0;
     padding: 0;
 
 }
 
-#container{
+#containerlogin{
     position: fixed;
-    /* background: rgba(0, 0, 0, 0.3); */
+    background: rgba(0, 0, 0, 0.5);
     color: #FFFFFF;
-
     width: 340px;
-    height: 250px;
-    top: 35%;
-    left: 70%;
-    margin-top: -130px;
-    margin-left: -170px;
-}
-#container2{
-    position: fixed;
-    background: rgba(0, 0, 0, 0.3);
-    color: #FFFFFF;
-
-
-    width: 340px;
-    height: 250px;
+    height: 400px;
     top: 45%;
     left: 70%;
-    margin-top: -130px;
+    margin-top: -250px;
     margin-left: -170px;
 }
-#
-form{
-    margin: 0 auto;
-    margin-top: 20px;
+
+#containersignup{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
+    width: 340px;
+    height: 550px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -170px;
 }
 
 label{
   color: #FFFFFF;
-    display: inline-block;
-    margin-left: 18px;
-    padding-top: 10px;
-    font-size: 14px;
+  display: inline-block;
+  margin-left: 18px;
+  padding-top: 10px;
+  font-size: 20px;
 }
 
+a:visited{
+  color:white;
+}
 p a{
     font-size: 15px;
     color: #FFFFFF;
@@ -64,18 +58,10 @@ p a:hover{
       color: #FFFFFF;
 }
 
-input{
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 12px;
-    outline: none;
-    background-color: transparent;
-    color: #FFFFFF;
-
-}
-
 input[type=text],
 input[type=password]{
     padding-left: 10px;
+    font-size: 14px;
     margin: 10px;
     margin-top: 12px;
     margin-left: 18px;
@@ -83,7 +69,6 @@ input[type=password]{
     height: 35px;
 
 }
-
 
 #lower{
     /* background: #ecf2f5; */
@@ -100,8 +85,6 @@ input[type=password]{
     margin-right: 30px;
 }
 
-
-
 input[type=checkbox]{
     margin-left: 20px;
     margin-top: 30px;
@@ -110,10 +93,6 @@ input[type=checkbox]{
 .check{
     margin-left: 3px;
 }
-/* .signin {
-  /* background-color: #f1f1f1; */
-  /* text-align: left; */
-/* } */
 
 .signin .message {
   margin: 15px 15px 15px;
@@ -126,19 +105,13 @@ input[type=checkbox]{
   text-decoration: none;
 }
 
-
 button {
   font-size: 20px;
-  margin-right: 20px;
-  margin-left: 135px;
-
-  margin-top: 5%;
   width: 80px;
   height: 30px;
 }
 
 button:hover {
   border: 1px solid #999;
-  background: #ffb6c1;
-  /* opacity: 0.8; */
+  background: #a6a8ab;
 }
