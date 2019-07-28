@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -48,15 +48,14 @@ table {
     border-spacing: 0;
 }
 
-/* Header */
-
 header {
-    padding: 20px 0;
-    margin: 0 0 40px 0;
-    background: #5778C4;
-    color: #fff;
+    margin: 0 0 0 0;
+    background: rgba(169, 169, 169, 0.7);
+    color: #FFFFFF;
 }
     header h1 {
+        padding: 52px 0;
+        text-align: center;
         width: 800px;
         margin: 0 auto;
         font-size: 40px;
@@ -67,10 +66,15 @@ header {
         right: 20px;
         color: #fff;
     }
+    header img {
+        float: left;
+        position: fixed;
+        width: 256px;
+        height: 144px;
+    }
 
-/* Body */
 section {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -82,37 +86,59 @@ p {
     color: #666;
     font-style: italic;
 }
+.navbar{
+  float: left;
+  width: 256px;
+  display: flex;
+  flex-direction: column;
+}
 
 .rooms li {
-    padding: 5px 7px;
-    background: #def;
-    display: inline;
-    margin: 5px 2px;
-    border: 1px solid #bcd;
-    border-radius: 2px;
+    background: rgba(169, 169, 169, 0.7);
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
     cursor: pointer;
+    padding-top: 20px;
+    font-size: 17px;
+    width: 256px;
+    height: 40px;
+    text-align: center;
+    flex-basis: 250px;
+    margin: auto;
+    flex-grow: 2;
 }
+
+
     .rooms li.joined {
-        background: #5898D9;
-        border: 1px solid #35485C;
+        margin-bottom: 25%;
+        background: rgb(255, 127, 80, 0.7)
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
     }
 
 #chats {
 }
     #chats .room {
-        border: 1px solid #ccc;
         padding: 5px;
         margin: 30px 0 0 0;
+        position: fixed;
+        left:256px;
+        top: 120px;
     }
-    #chats h2 {
-        color: #333;
-        margin: 2px 0 5px 0;
-        font-weight: bold;
-    }
+
     #chats .messages {
-        height: 200px;
+        height: 400px;
+        width: 1100px;
         overflow: auto;
-        background: #eee;
+        background: rgba(169, 169, 169, 0.7);
         margin: 2px 0 5px 0;
     }
     #chats .username {

@@ -10,13 +10,25 @@
 	<script src="{% static "js/jquery-1.12.2.min.js" %}" type="text/javascript"></script>
 	<script src="{% static "js/reconnecting-websocket.min.js" %}" type="text/javascript"></script>
 	{% block extra_head %}{% endblock %}
+  <style type="text/css">
+     body{
+      background: url('{% static "images/bubcham.jpeg" %}') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+     }
+  </style>
+
 </head>
 <body>
 	<header>
-		<h1>{% block header_text %}{% endblock %}</h1>
-		{% if user.is_authenticated %}
+    <img src='{% static "images/background4.png" %}' alt="logo" />
+		<h1>{% block header_text %}{% endblock %}
+		{% if user.is_authenticated %}</h1>
 			<a href="/accounts/logout/">Logout</a>
 		{% endif %}
+
 	</header>
 	<section>
 		{% block content %}
